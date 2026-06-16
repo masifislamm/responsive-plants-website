@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/product-detail.css">
+
+        <title>Cacti Plant &mdash; ECOLEAF</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="index.html" class="nav__logo">
+                    <i class="ri-leaf-line nav__logo-icon"></i> ECOLEAF
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html#home" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="index.html#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="index.html#products" class="nav__link active-link">Products</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="index.html#faqs" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="index.html#contact" class="nav__link">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+
+            <!--==================== PRODUCT DETAIL ====================-->
+            <section class="detail section container">
+
+                <!--===== BREADCRUMB =====-->
+                <nav class="detail__breadcrumb">
+                    <a href="index.html" class="detail__breadcrumb-link">Home</a>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <a href="index.html#products" class="detail__breadcrumb-link">Products</a>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <span class="detail__breadcrumb-current">Cacti Plant</span>
+                </nav>
+
+                <div class="detail__container grid">
+
+                    <!--===== IMAGE COLUMN =====-->
+                    <div class="detail__image-box">
+                        <div class="detail__circle"></div>
+
+                        <img src="assets/img/product1.png"
+                             alt="Cacti Plant"
+                             class="detail__img"
+                             id="detail-main-img">
+
+                        <div class="detail__thumbs">
+                            <button class="detail__thumb detail__thumb--active"
+                                    onclick="switchThumb(this,'assets/img/product1.png')">
+                                <img src="assets/img/product1.png" alt="View 1">
+                            </button>
+                            <button class="detail__thumb"
+                                    onclick="switchThumb(this,'assets/img/product2.png')">
+                                <img src="assets/img/product2.png" alt="View 2">
+                            </button>
+                            <button class="detail__thumb"
+                                    onclick="switchThumb(this,'assets/img/product3.png')">
+                                <img src="assets/img/product3.png" alt="View 3">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--===== DATA COLUMN =====-->
+                    <div class="detail__data">
+
+                        <span class="detail__category">Indoor Plant</span>
+                        <h1 class="detail__title">Cacti Plant</h1>
+
+                        <div class="detail__rating">
+                            <span class="detail__stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </span>
+                            <span class="detail__rating-count">4.5 &nbsp;(24 reviews)</span>
+                        </div>
+
+                        <div class="detail__price-group">
+                            <span class="detail__price">$19.99</span>
+                            <span class="detail__price-old">$24.99</span>
+                            <span class="detail__price-badge">Save 20%</span>
+                        </div>
+
+                        <p class="detail__description">
+                            A resilient and beautiful cacti plant that thrives in dry,
+                            sunny conditions. Virtually maintenance-free, it naturally
+                            purifies indoor air and brings life to any home or office.
+                            Its sculptural silhouette makes it a stunning focal point
+                            that demands almost nothing in return.
+                        </p>
+
+                        <!--===== ECO SCORE =====-->
+                        <div class="detail__eco">
+                            <div class="detail__eco-header">
+                                <h3 class="detail__eco-title">
+                                    <i class="ri-leaf-line"></i> Eco Score
+                                </h3>
+                                <span class="detail__eco-badge">Excellent</span>
+                            </div>
+
+                            <div class="detail__eco-leaves">
+                                <i class="ri-leaf-line detail__eco-leaf detail__eco-leaf--on"></i>
+                                <i class="ri-leaf-line detail__eco-leaf detail__eco-leaf--on"></i>
+                                <i class="ri-leaf-line detail__eco-leaf detail__eco-leaf--on"></i>
+                                <i class="ri-leaf-line detail__eco-leaf detail__eco-leaf--on"></i>
+                                <i class="ri-leaf-line detail__eco-leaf"></i>
+                                <span class="detail__eco-score">4 / 5</span>
+                            </div>
+
+                            <p class="detail__eco-note">
+                                Minimal water use &nbsp;&middot;&nbsp; Long lifespan &nbsp;&middot;&nbsp; Recycled packaging
+                            </p>
+                        </div>
+
+                        <!--===== MATERIALS =====-->
+                        <div class="detail__materials">
+                            <h3 class="detail__section-label">Materials &amp; Packaging</h3>
+                            <ul class="detail__materials-list">
+                                <li class="detail__material">
+                                    <i class="ri-checkbox-circle-line"></i> Ceramic Pot
+                                </li>
+                                <li class="detail__material">
+                                    <i class="ri-checkbox-circle-line"></i> Organic Soil Mix
+                                </li>
+                                <li class="detail__material">
+                                    <i class="ri-checkbox-circle-line"></i> Natural Fertilizer
+                                </li>
+                                <li class="detail__material">
+                                    <i class="ri-checkbox-circle-line"></i> Recycled Packaging
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!--===== ACTIONS =====-->
+                        <div class="detail__actions">
+                            <div class="detail__qty">
+                                <button class="detail__qty-btn" id="qty-minus" aria-label="Decrease">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <span class="detail__qty-val" id="qty-value">1</span>
+                                <button class="detail__qty-btn" id="qty-plus" aria-label="Increase">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+
+                            <button class="button button--flex detail__cart-btn" id="add-to-cart">
+                                <i class="ri-shopping-bag-line button__icon"></i>
+                                Add to Cart
+                            </button>
+
+                            <button class="detail__wish-btn" id="wish-btn" aria-label="Add to wishlist">
+                                <i class="ri-heart-line"></i>
+                            </button>
+                        </div>
+
+                        <!--===== CARE CHIPS =====-->
+                        <div class="detail__care">
+                            <div class="detail__care-chip">
+                                <i class="ri-sun-line"></i>
+                                <span>Full Sunlight</span>
+                            </div>
+                            <div class="detail__care-chip">
+                                <i class="ri-drop-line"></i>
+                                <span>Low Water</span>
+                            </div>
+                            <div class="detail__care-chip">
+                                <i class="ri-home-line"></i>
+                                <span>Indoor / Outdoor</span>
+                            </div>
+                            <div class="detail__care-chip">
+                                <i class="ri-time-line"></i>
+                                <span>Long Lifespan</span>
+                            </div>
+                        </div>
+
+                    </div><!--end .detail__data-->
+                </div><!--end .detail__container-->
+            </section>
+
+            <!--==================== REVIEWS ====================-->
+            <section class="reviews section container">
+
+                <h2 class="section__title-center">
+                    What our customers <br> are saying
+                </h2>
+
+                <!--===== SUMMARY =====-->
+                <div class="reviews__summary">
+                    <div class="reviews__overall">
+                        <span class="reviews__big-score">4.5</span>
+                        <div class="reviews__overall-stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                        <span class="reviews__total">24 reviews</span>
+                    </div>
+
+                    <div class="reviews__breakdown">
+                        <div class="reviews__bar-row">
+                            <span class="reviews__bar-label">5 <i class="ri-star-fill"></i></span>
+                            <div class="reviews__bar-track">
+                                <div class="reviews__bar-fill" style="width:65%"></div>
+                            </div>
+                            <span class="reviews__bar-pct">65%</span>
+                        </div>
+                        <div class="reviews__bar-row">
+                            <span class="reviews__bar-label">4 <i class="ri-star-fill"></i></span>
+                            <div class="reviews__bar-track">
+                                <div class="reviews__bar-fill" style="width:20%"></div>
+                            </div>
+                            <span class="reviews__bar-pct">20%</span>
+                        </div>
+                        <div class="reviews__bar-row">
+                            <span class="reviews__bar-label">3 <i class="ri-star-fill"></i></span>
+                            <div class="reviews__bar-track">
+                                <div class="reviews__bar-fill" style="width:10%"></div>
+                            </div>
+                            <span class="reviews__bar-pct">10%</span>
+                        </div>
+                        <div class="reviews__bar-row">
+                            <span class="reviews__bar-label">2 <i class="ri-star-fill"></i></span>
+                            <div class="reviews__bar-track">
+                                <div class="reviews__bar-fill" style="width:3%"></div>
+                            </div>
+                            <span class="reviews__bar-pct">3%</span>
+                        </div>
+                        <div class="reviews__bar-row">
+                            <span class="reviews__bar-label">1 <i class="ri-star-fill"></i></span>
+                            <div class="reviews__bar-track">
+                                <div class="reviews__bar-fill" style="width:2%"></div>
+                            </div>
+                            <span class="reviews__bar-pct">2%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--===== REVIEW CARDS =====-->
+                <div class="reviews__grid grid">
+
+                    <article class="review__card">
+                        <div class="review__top">
+                            <div class="review__avatar">S</div>
+                            <div class="review__meta">
+                                <h4 class="review__author">Sarah M.</h4>
+                                <span class="review__date">March 12, 2024</span>
+                            </div>
+                            <div class="review__stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                        </div>
+                        <h5 class="review__title">Beautiful and healthy plant!</h5>
+                        <p class="review__body">
+                            The cacti arrived in perfect condition, well-packaged and healthy.
+                            It has been three months and it is thriving on my windowsill.
+                            Definitely recommend for beginners — zero effort required!
+                        </p>
+                        <button class="review__helpful">
+                            <i class="ri-thumb-up-line"></i> Helpful (12)
+                        </button>
+                    </article>
+
+                    <article class="review__card">
+                        <div class="review__top">
+                            <div class="review__avatar">J</div>
+                            <div class="review__meta">
+                                <h4 class="review__author">James T.</h4>
+                                <span class="review__date">February 5, 2024</span>
+                            </div>
+                            <div class="review__stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                        </div>
+                        <h5 class="review__title">Great quality, fast shipping</h5>
+                        <p class="review__body">
+                            Really impressed by the ceramic pot quality and the soil mix.
+                            The plant looks exactly like the photos and shipping was quick.
+                            The eco-friendly packaging is a huge plus for me.
+                        </p>
+                        <button class="review__helpful">
+                            <i class="ri-thumb-up-line"></i> Helpful (8)
+                        </button>
+                    </article>
+
+                    <article class="review__card">
+                        <div class="review__top">
+                            <div class="review__avatar">A</div>
+                            <div class="review__meta">
+                                <h4 class="review__author">Aisha K.</h4>
+                                <span class="review__date">January 20, 2024</span>
+                            </div>
+                            <div class="review__stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </div>
+                        </div>
+                        <h5 class="review__title">Perfect for my home office</h5>
+                        <p class="review__body">
+                            I bought this for my desk and it has transformed the space completely.
+                            Very easy to care for — I water it once a week and it looks amazing.
+                            The high eco score was a big selling point for me.
+                        </p>
+                        <button class="review__helpful">
+                            <i class="ri-thumb-up-line"></i> Helpful (5)
+                        </button>
+                    </article>
+
+                </div>
+
+                <div class="reviews__more">
+                    <a href="#" class="button--link button--flex">
+                        View all reviews <i class="ri-arrow-right-down-line button__icon"></i>
+                    </a>
+                </div>
+
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="footer__logo">
+                        <i class="ri-leaf-line footer__logo-icon"></i> ECOLEAF
+                    </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our newsletter <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        <input type="email" placeholder="Enter your email" class="footer__input">
+                        <button class="button button--flex footer__button">
+                            Subscribe
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+                    <ul class="footer__data">
+                        <li class="footer__information">1234 - Peru</li>
+                        <li class="footer__information">La Libertad - 43210</li>
+                        <li class="footer__information">123-456-789</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+                    <ul class="footer__data">
+                        <li class="footer__information">+999 888 777</li>
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        We accept all credit cards
+                    </h3>
+                    <div class="footer__cards">
+                        <img src="assets/img/card1.png" alt="" class="footer__card">
+                        <img src="assets/img/card2.png" alt="" class="footer__card">
+                        <img src="assets/img/card3.png" alt="" class="footer__card">
+                        <img src="assets/img/card4.png" alt="" class="footer__card">
+                    </div>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Md Asif Islam. All rights reserved</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+
+        <!--=============== PRODUCT DETAIL JS ===============-->
+        <script src="assets/js/product-detail.js"></script>
+    </body>
+</html>

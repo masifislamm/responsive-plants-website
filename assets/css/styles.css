@@ -550,6 +550,15 @@ the website, in dark theme
   transform: translateY(-.5rem);
 }
 
+.product__title-link{
+  color: inherit;
+  transition: .3s;
+}
+
+.product__title-link:hover{
+  color: var(--first-color);
+}
+
 /*=============== QUESTIONS ===============*/
 .questions{
   background-color: var(--first-color-lighten);
