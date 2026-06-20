@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+
+    <title>Checkout &mdash; ECOLEAF</title>
+</head>
+<body>
+
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <i class="ri-leaf-line nav__logo-icon"></i> ECOLEAF
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="index.html#products" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="index.html#faqs" class="nav__link">FAQs</a></li>
+                    <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact Us</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+                <a href="checkout.html" class="nav__cart" aria-label="Cart">
+                    <i class="ri-shopping-cart-line"></i>
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="checkout section container">
+
+            <!--===== BREADCRUMB =====-->
+            <nav class="checkout__breadcrumb">
+                <a href="index.html" class="checkout__breadcrumb-link">Home</a>
+                <i class="ri-arrow-right-s-line"></i>
+                <a href="index.html#products" class="checkout__breadcrumb-link">Products</a>
+                <i class="ri-arrow-right-s-line"></i>
+                <a href="product-detail.html" class="checkout__breadcrumb-link">Cacti Plant</a>
+                <i class="ri-arrow-right-s-line"></i>
+                <span class="checkout__breadcrumb-current">Checkout</span>
+            </nav>
+
+            <!--===== PROGRESS STEPS =====-->
+            <div class="checkout__steps" id="checkout-steps">
+                <div class="checkout__step checkout__step--done" data-step="0">
+                    <div class="checkout__step-icon"><i class="ri-shopping-bag-line"></i></div>
+                    <span class="checkout__step-label">Cart</span>
+                </div>
+                <div class="checkout__step-line checkout__step-line--done" id="line-0"></div>
+
+                <div class="checkout__step checkout__step--active" data-step="1">
+                    <div class="checkout__step-icon"><i class="ri-truck-line"></i></div>
+                    <span class="checkout__step-label">Shipping</span>
+                </div>
+                <div class="checkout__step-line" id="line-1"></div>
+
+                <div class="checkout__step" data-step="2">
+                    <div class="checkout__step-icon"><i class="ri-bank-card-line"></i></div>
+                    <span class="checkout__step-label">Payment</span>
+                </div>
+                <div class="checkout__step-line" id="line-2"></div>
+
+                <div class="checkout__step" data-step="3">
+                    <div class="checkout__step-icon"><i class="ri-checkbox-circle-line"></i></div>
+                    <span class="checkout__step-label">Confirm</span>
+                </div>
+            </div>
+
+            <!--===== CHECKOUT GRID =====-->
+            <div class="checkout__grid">
+
+                <!--===== LEFT COLUMN — STEP PANELS =====-->
+                <div class="checkout__forms">
+
+                    <!-- ========== PANEL 1: SHIPPING ========== -->
+                    <div class="checkout__panel" id="panel-1">
+
+                        <div class="checkout__section">
+                            <h2 class="checkout__section-title">
+                                <i class="ri-user-line"></i> Contact Information
+                            </h2>
+                            <div class="checkout__field">
+                                <label class="checkout__label">Email Address</label>
+                                <input type="email" class="checkout__input" placeholder="you@example.com">
+                            </div>
+                            <div class="checkout__check-row">
+                                <input type="checkbox" id="news" class="checkout__checkbox">
+                                <label for="news" class="checkout__check-label">Keep me updated on offers &amp; news</label>
+                            </div>
+                        </div>
+
+                        <div class="checkout__section">
+                            <h2 class="checkout__section-title">
+                                <i class="ri-map-pin-line"></i> Shipping Address
+                            </h2>
+
+                            <div class="checkout__row">
+                                <div class="checkout__field">
+                                    <label class="checkout__label">First Name</label>
+                                    <input type="text" class="checkout__input" placeholder="John">
+                                </div>
+                                <div class="checkout__field">
+                                    <label class="checkout__label">Last Name</label>
+                                    <input type="text" class="checkout__input" placeholder="Doe">
+                                </div>
+                            </div>
+
+                            <div class="checkout__field">
+                                <label class="checkout__label">Address</label>
+                                <input type="text" class="checkout__input" placeholder="123 Green Street">
+                            </div>
+
+                            <div class="checkout__field">
+                                <label class="checkout__label">
+                                    Apartment, suite, etc.
+                                    <span class="checkout__optional">(optional)</span>
+                                </label>
+                                <input type="text" class="checkout__input" placeholder="Apt 4B">
+                            </div>
+
+                            <div class="checkout__row checkout__row--three">
+                                <div class="checkout__field">
+                                    <label class="checkout__label">City</label>
+                                    <input type="text" class="checkout__input" placeholder="New York">
+                                </div>
+                                <div class="checkout__field">
+                                    <label class="checkout__label">State</label>
+                                    <input type="text" class="checkout__input" placeholder="NY">
+                                </div>
+                                <div class="checkout__field">
+                                    <label class="checkout__label">ZIP Code</label>
+                                    <input type="text" class="checkout__input" placeholder="10001">
+                                </div>
+                            </div>
+
+                            <div class="checkout__field">
+                                <label class="checkout__label">Country</label>
+                                <div class="checkout__select-wrap">
+                                    <select class="checkout__input checkout__select">
+                                        <option value="">Select country</option>
+                                        <option>United States</option>
+                                        <option>United Kingdom</option>
+                                        <option>Canada</option>
+                                        <option>Australia</option>
+                                        <option>Germany</option>
+                                        <option>France</option>
+                                        <option>Pakistan</option>
+                                        <option>India</option>
+                                        <option>Other</option>
+                                    </select>
+                                    <i class="ri-arrow-down-s-line checkout__select-icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="checkout__field">
+                                <label class="checkout__label">
+                                    Phone <span class="checkout__optional">(optional)</span>
+                                </label>
+                                <input type="tel" class="checkout__input" placeholder="+1 (555) 000-0000">
+                            </div>
+                        </div>
+
+                        <div class="checkout__section">
+                            <h2 class="checkout__section-title">
+                                <i class="ri-truck-line"></i> Delivery Method
+                            </h2>
+
+                            <label class="checkout__delivery">
+                                <input type="radio" name="delivery" class="checkout__radio" checked>
+                                <div class="checkout__delivery-card">
+                                    <div class="checkout__delivery-info">
+                                        <span class="checkout__delivery-name">Standard Delivery</span>
+                                        <span class="checkout__delivery-eta">5 – 7 business days</span>
+                                    </div>
+                                    <span class="checkout__delivery-price checkout__delivery-free">Free</span>
+                                </div>
+                            </label>
+
+                            <label class="checkout__delivery">
+                                <input type="radio" name="delivery" class="checkout__radio">
+                                <div class="checkout__delivery-card">
+                                    <div class="checkout__delivery-info">
+                                        <span class="checkout__delivery-name">Express Delivery</span>
+                                        <span class="checkout__delivery-eta">1 – 3 business days</span>
+                                    </div>
+                                    <span class="checkout__delivery-price">$9.99</span>
+                                </div>
+                            </label>
+
+                            <label class="checkout__delivery">
+                                <input type="radio" name="delivery" class="checkout__radio">
+                                <div class="checkout__delivery-card">
+                                    <div class="checkout__delivery-info">
+                                        <span class="checkout__delivery-name">Next Day Delivery</span>
+                                        <span class="checkout__delivery-eta">Order before 2 PM</span>
+                                    </div>
+                                    <span class="checkout__delivery-price">$19.99</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <button class="button button--flex checkout__next-btn" onclick="goToStep(2)">
+                            Continue to Payment
+                            <i class="ri-arrow-right-line button__icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- ========== PANEL 2: PAYMENT ========== -->
+                    <div class="checkout__panel checkout__panel--hidden" id="panel-2">
+
+                        <div class="checkout__section">
+                            <h2 class="checkout__section-title">
+                                <i class="ri-bank-card-line"></i> Payment Details
+                            </h2>
+
+                            <div class="checkout__payment-logos">
+                                <img src="assets/img/card1.png" alt="" class="checkout__payment-logo">
+                                <img src="assets/img/card2.png" alt="" class="checkout__payment-logo">
+                                <img src="assets/img/card3.png" alt="" class="checkout__payment-logo">
+                                <img src="assets/img/card4.png" alt="" class="checkout__payment-logo">
+                            </div>
+
+                            <div class="checkout__card-visual">
+                                <div class="checkout__card-chip"><i class="ri-sim-card-line"></i></div>
+                                <div class="checkout__card-number-preview">•••• •••• •••• ••••</div>
+                                <div class="checkout__card-bottom">
+                                    <span class="checkout__card-holder">CARD HOLDER</span>
+                                    <span class="checkout__card-expiry">MM / YY</span>
+                                </div>
+                            </div>
+
+                            <div class="checkout__field">
+                                <label class="checkout__label">Card Number</label>
+                                <div class="checkout__input-icon-wrap">
+                                    <input type="text" class="checkout__input" placeholder="1234  5678  9012  3456" maxlength="19">
+                                    <i class="ri-bank-card-line checkout__input-icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="checkout__field">
+                                <label class="checkout__label">Name on Card</label>
+                                <input type="text" class="checkout__input" placeholder="John Doe">
+                            </div>
+
+                            <div class="checkout__row">
+                                <div class="checkout__field">
+                                    <label class="checkout__label">Expiry Date</label>
+                                    <input type="text" class="checkout__input" placeholder="MM / YY" maxlength="7">
+                                </div>
+                                <div class="checkout__field">
+                                    <label class="checkout__label">CVV</label>
+                                    <div class="checkout__input-icon-wrap">
+                                        <input type="text" class="checkout__input" placeholder="•••" maxlength="4">
+                                        <i class="ri-question-line checkout__input-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="checkout__secure">
+                                <i class="ri-lock-line"></i>
+                                <span>All transactions are secured and encrypted.</span>
+                            </div>
+                        </div>
+
+                        <div class="checkout__panel-nav">
+                            <button class="checkout__back-btn" onclick="goToStep(1)">
+                                <i class="ri-arrow-left-line"></i> Back to Shipping
+                            </button>
+                            <button class="button button--flex checkout__next-btn" onclick="goToStep(3)">
+                                Place Order
+                                <i class="ri-arrow-right-line button__icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ========== PANEL 3: CONFIRM ========== -->
+                    <div class="checkout__panel checkout__panel--hidden" id="panel-3">
+                        <div class="checkout__confirm">
+                            <div class="checkout__confirm-icon">
+                                <i class="ri-checkbox-circle-line"></i>
+                            </div>
+                            <h2 class="checkout__confirm-title">Order Confirmed!</h2>
+                            <p class="checkout__confirm-msg">
+                                Thank you for your purchase. Your order has been placed successfully
+                                and will be on its way soon.
+                            </p>
+
+                            <div class="checkout__confirm-card">
+                                <div class="checkout__confirm-row">
+                                    <span>Order Number</span>
+                                    <strong>#ECO-29471</strong>
+                                </div>
+                                <div class="checkout__confirm-row">
+                                    <span>Product</span>
+                                    <strong>Cacti Plant × 1</strong>
+                                </div>
+                                <div class="checkout__confirm-row">
+                                    <span>Estimated Delivery</span>
+                                    <strong>5 – 7 Business Days</strong>
+                                </div>
+                                <div class="checkout__confirm-row">
+                                    <span>Total Paid</span>
+                                    <strong class="checkout__confirm-total">$21.59</strong>
+                                </div>
+                            </div>
+
+                            <p class="checkout__confirm-email">
+                                A confirmation has been sent to your email address.
+                            </p>
+
+                            <a href="index.html#products" class="button button--flex checkout__confirm-cta">
+                                Continue Shopping
+                                <i class="ri-arrow-right-line button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div><!--end .checkout__forms-->
+
+                <!--===== RIGHT COLUMN — ORDER SUMMARY =====-->
+                <aside class="checkout__summary" id="checkout-summary">
+
+                    <h2 class="checkout__summary-title">Order Summary</h2>
+
+                    <div class="checkout__item">
+                        <div class="checkout__item-img-wrap">
+                            <div class="checkout__item-circle"></div>
+                            <img src="assets/img/product1.png" alt="Cacti Plant" class="checkout__item-img">
+                            <span class="checkout__item-qty">1</span>
+                        </div>
+                        <div class="checkout__item-info">
+                            <p class="checkout__item-name">Cacti Plant</p>
+                            <span class="checkout__item-variant">Ceramic Pot · Indoor</span>
+                        </div>
+                        <span class="checkout__item-price">$19.99</span>
+                    </div>
+
+                    <div class="checkout__divider"></div>
+
+                    <div class="checkout__discount">
+                        <input type="text" class="checkout__input" placeholder="Discount code">
+                        <button class="checkout__discount-btn">Apply</button>
+                    </div>
+
+                    <div class="checkout__divider"></div>
+
+                    <div class="checkout__costs">
+                        <div class="checkout__cost-row">
+                            <span>Subtotal</span>
+                            <span>$19.99</span>
+                        </div>
+                        <div class="checkout__cost-row">
+                            <span>Shipping</span>
+                            <span class="checkout__cost-free">Free</span>
+                        </div>
+                        <div class="checkout__cost-row">
+                            <span>Tax (8%)</span>
+                            <span>$1.60</span>
+                        </div>
+                    </div>
+
+                    <div class="checkout__divider"></div>
+
+                    <div class="checkout__total-row">
+                        <span class="checkout__total-label">Total</span>
+                        <span class="checkout__total-amount">$21.59</span>
+                    </div>
+                    <p class="checkout__total-note">Including $1.60 in taxes</p>
+
+                    <div class="checkout__trust">
+                        <div class="checkout__trust-item">
+                            <i class="ri-shield-check-line"></i>
+                            <span>Secure Checkout</span>
+                        </div>
+                        <div class="checkout__trust-item">
+                            <i class="ri-refund-2-line"></i>
+                            <span>30-Day Returns</span>
+                        </div>
+                        <div class="checkout__trust-item">
+                            <i class="ri-customer-service-line"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div><!--end .checkout__grid-->
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="index.html" class="footer__logo">
+                    <i class="ri-leaf-line footer__logo-icon"></i> ECOLEAF
+                </a>
+                <h3 class="footer__title">Subscribe to our newsletter <br> to stay update</h3>
+                <div class="footer__subscribe">
+                    <input type="email" placeholder="Enter your email" class="footer__input">
+                    <button class="button button--flex footer__button">
+                        Subscribe <i class="ri-arrow-right-up-line button__icon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Our Address</h3>
+                <ul class="footer__data">
+                    <li class="footer__information">1234 - Peru</li>
+                    <li class="footer__information">La Libertad - 43210</li>
+                    <li class="footer__information">123-456-789</li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Contact Us</h3>
+                <ul class="footer__data">
+                    <li class="footer__information">+999 888 777</li>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/" class="footer__social-link"><i class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+                        <a href="https://twitter.com/" class="footer__social-link"><i class="ri-twitter-fill"></i></a>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">We accept all credit cards</h3>
+                <div class="footer__cards">
+                    <img src="assets/img/card1.png" alt="" class="footer__card">
+                    <img src="assets/img/card2.png" alt="" class="footer__card">
+                    <img src="assets/img/card3.png" alt="" class="footer__card">
+                    <img src="assets/img/card4.png" alt="" class="footer__card">
+                </div>
+            </div>
+        </div>
+        <p class="footer__copy">&#169; Md Asif Islam. All rights reserved</p>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup__icon"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <!--=============== CHECKOUT JS ===============-->
+    <script src="assets/js/checkout.js"></script>
+</body>
+</html>

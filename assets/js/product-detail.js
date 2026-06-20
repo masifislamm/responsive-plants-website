@@ -24,9 +24,8 @@ if(cartBtn){
         cartBtn.innerHTML = '<i class="ri-checkbox-circle-line button__icon"></i> Added!'
 
         setTimeout(() => {
-            cartBtn.innerHTML = '<i class="ri-shopping-bag-line button__icon"></i> Add to Cart'
-            cartBtn.classList.remove('detail__cart-btn--added')
-        }, 2000)
+            window.location.href = 'checkout.html'
+        }, 900)
     })
 }
 

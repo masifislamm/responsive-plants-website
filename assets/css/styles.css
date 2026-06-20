@@ -232,6 +232,23 @@ the website, in dark theme
   cursor: pointer;
 }
 
+.nav__cart{
+  display: inline-flex;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  transition: .3s;
+}
+
+.nav__cart:hover{
+  color: var(--first-color);
+}
+
+.nav__btns{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .75rem;
+}
+
 @media screen and (max-width: 767px){
   .nav__menu{
     position: fixed;
@@ -555,8 +572,19 @@ the website, in dark theme
   transition: .3s;
 }
 
+.product__title-link::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
 .product__title-link:hover{
   color: var(--first-color);
+}
+
+.product__button{
+  position: relative;
+  z-index: 1;
 }
 
 /*=============== QUESTIONS ===============*/
